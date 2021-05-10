@@ -1,0 +1,54 @@
+{
+  "name": "users-service",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Edib Isic",
+  "scripts": {
+    "db:migrate": "ts-node ./node_modules/typeorm/cli.js migration:run",
+    "db:migrate:undo": "ts-node ./node_modules/typeorm/cli.js migration:revert",
+    "watch": "ts-node-dev --respawn index.dev.ts",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
+    "test": "mocha --require babel-register ./src/tests/*.js --exit",
+    "dev": "nodemon --exec babel-node --presets babel-preset-env ./src/server/startServer.ts"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/config": "^0.0.38",
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/lodash.omit": "^4.5.6",
+    "@types/node": "^15.0.2",
+    "@types/uuid": "^8.3.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.3.4",
+    "chai-http": "^4.0.0",
+    "mocha": "^5.2.0",
+    "module-alias": "^2.2.2",
+    "nodemon": "^1.17.4",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "~1.1.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "dayjs": "^1.10.4",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "lodash.get": "^4.4.2",
+    "lodash.omit": "^4.5.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "pg": "^8.6.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.32",
+    "uuid": "^8.3.2",
+    "yarn": "^1.22.10"
+  },
+  "_moduleAliases": {
+    "#root": "./src"
+  }
+}
