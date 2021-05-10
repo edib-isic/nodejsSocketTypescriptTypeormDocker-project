@@ -13,3 +13,6 @@ Dabei helfen uns unsere neuesten Technologien wie DaiFi einzusetzen!
 Seien Sie der Konkurrenz um Lichtjahre Voraus.
 
 Wir sehen uns in der Milchstraße!
+
+alle wichtigen rest api requests in der Postman Cloud
+https://www.getpostman.com/collections/afe83bdfac8c01c2c00f
