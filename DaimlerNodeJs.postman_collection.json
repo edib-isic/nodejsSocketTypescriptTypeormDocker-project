@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "51fd2168-b9d4-4349-bdcc-da993b45a936",
+		"name": "DaimlerNodeJs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addRover => localhost:7101/addRover",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"typ\":\"Satelitte41232112116\",\r\n\t\"energy\":\"210\",\r\n    \"status\":\"NO_WARNINGS,123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7101/addRover",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"addRover"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "//start new spaceSession by userId and roverId:=>http://localhost:7101/startSession",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"userId\":\"181c06b4-13bb-445f-858a-92598007d2be\",\r\n\t\"roverId\":\"aa1376d9-f596-4770-8d58-c3d765813ad9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7101/startSession",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"startSession"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new user: localhost:7101/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\":\"eda134\",\r\n\t\"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7101/users",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllFreeRovers:  localhost:7101/getFreeRovers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "citizen",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"typ\":\"Satelitte\",\r\n\t\"energy\":\"50\",\r\n    \"status\":\"NO_WARNINGS\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7101/getFreeRovers",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"getFreeRovers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookRover:  localhost:7101/bookRover",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "citizen",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\":\"67e1d95f-be68-4aa6-b77c-2d4c564d7d54\",\r\n    \"userId\": \"67e1d95f-be68-4aa6-b77c-2d4c564d7d54\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7101/bookRover?userId=b4d56954-096f-4e3b-9edd-9314b9567e0b",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"bookRover"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "b4d56954-096f-4e3b-9edd-9314b9567e0b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sessionById localhost:7101/sessions/:sessionId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "sessionId",
+						"value": "5515e2fe-3a79-4ea7-8a53-45c49a28126d",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:7101/sessions/:sessionId=2b2250d5-9d6e-47ca-b892-6f8345e553f7",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"sessions",
+						":sessionId=2b2250d5-9d6e-47ca-b892-6f8345e553f7"
+					],
+					"variable": [
+						{
+							"key": "sessionId=2b2250d5-9d6e-47ca-b892-6f8345e553f7",
+							"value": "2b2250d5-9d6e-47ca-b892-6f8345e553f7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "//get Rovers byUserId:  localhost:7101/rovers/:userId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7101/rovers/:userId",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"rovers",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "181c06b4-13bb-445f-858a-92598007d2be"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "//get User byUserId:  localhost:7101/users/:userId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:7101/rovers/?userId=181c06b4-13bb-445f-858a-92598007d2be",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"rovers",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "181c06b4-13bb-445f-858a-92598007d2be"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cancellDeleteSession/:sessionId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sessionId\": \"5515e2fe-3a79-4ea7-8a53-45c49a28126d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7101/cancellSession",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"cancellSession"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "//get all users/users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sessionId\": \"82b75b27-042b-4635-a2ff-6b5a9b4b8018\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7101/cancellSession",
+					"host": [
+						"localhost"
+					],
+					"port": "7101",
+					"path": [
+						"cancellSession"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
