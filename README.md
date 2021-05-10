@@ -1,4 +1,4 @@
-# nodejsSocketTypescriptTypeormDocker-project
+# This is a nodejs Typescript Typeorm Docker-project mysql phpmyadmin application for administration and save session of space rovers
 
 # HALLO IST JEMAND DA?
 
